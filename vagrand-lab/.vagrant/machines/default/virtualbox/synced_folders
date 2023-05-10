@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/empresa/sources/estudos/DevOps/DevOps_massa/vagrand-lab","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
