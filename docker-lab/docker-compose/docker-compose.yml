@@ -4,5 +4,5 @@ services:
     image: 'redis'
   node-app:
     build: .
-    port:
+    ports:
       - "8080:8081"
