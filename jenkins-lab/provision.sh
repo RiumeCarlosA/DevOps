@@ -22,3 +22,15 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 sudo chown -R root:docker /var/run/docker
 sudo usermod -aG docker jenkins
+
+###instalação do sonar scanner
+sudo yum install wget unzip -y
+sudo wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.8.0.2856-linux.zip
+sudo unzip sonar-scanner-cli-4.8.0.2856-linux.zip -d /opt/ 
+sudo mv /opt/sonar-scanner-4.8.0.2856-linux /opt/sonar-scanner
+sudo chown -R jenkins:jenkins /opt/sonar-scanner
+sudo echo 'export PATH=$PATH:/opt/sonar-scanner/bin' | sudo tee -a /etc/profile
+
+###instalação nodejs
+sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+sudo yum install nodejs -y
